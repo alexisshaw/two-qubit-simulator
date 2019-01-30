@@ -10,6 +10,7 @@ class QubitRegister(object): # pylint: disable=useless-object-inheritance
 
     def __init__(self, initial_state):
         """ Create a QubitRegister object """
+        self.state = initial_state;
         pass
 
     def apply_unitary(self, unitary):

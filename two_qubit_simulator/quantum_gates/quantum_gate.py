@@ -27,6 +27,10 @@ class QuantumGate(object): # pylint: disable=useless-object-inheritance
 
     def assert_operation_is_unitary(self):
         """ Checks that the input unitary operator is unitary """
+
+        assert np.array_equal(
+            np.transpose(np.conjugate(self.unitary_operator)),
+            self.unitary_operator), "An operator is unitary if it is equal to it's conjugate transpose"
         pass
 
     def __call__(self, register):
